@@ -24,6 +24,8 @@ const builderAPIKey = "25475952972f4b7ba74c484f0cb22b2b";
 
 builder.init(builderAPIKey);
 
-export function MyComponent() {
+const MyComponent = () => {
   return <BuilderComponent model="page" />;
-}
+};
+
+export default MyComponent;
