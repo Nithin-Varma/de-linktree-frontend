@@ -1,5 +1,4 @@
-import React from "react";
-import { Box } from "@chakra-ui/react";
+import { Paper } from "@material-ui/core";
 
 type ContainerProps = {
     background: string;
@@ -9,9 +8,9 @@ type ContainerProps = {
 
 const Container = ({background, padding = 0, children}: ContainerProps) => {
   return (
-    <Box style={{margin: "5px 0", background, padding: `${padding}px`}}>
+    <Paper style={{margin: "5px 0", background, padding: `${padding}px`}}>
       {children}
-    </Box>
+    </Paper>
   )
 }
 

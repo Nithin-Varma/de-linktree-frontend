@@ -1,19 +1,19 @@
-import React  from "react";
-import { Button } from "@chakra-ui/react";
+import {Button as MaterialButton} from "@material-ui/core";
 
-interface CustomButtonProps {
-    size: "sm" | "md" | "lg";
-    variant: string;
-    color: string;
+export interface ButtonProps {
+    size: "small" | "medium" | "large";
+    variant: "text" | "outlined" | "contained";
+    text:string;
+    color: "inherit" | "primary" | "secondary" | "default";
     children: React.ReactNode;
 }
 
-const CustomButton = ({ size, variant, color, children }: CustomButtonProps) => {
+const Button = ({size, variant, color, children}: ButtonProps) => {
     return (
-        <Button size={size} variant={variant} color={color}>
+        <MaterialButton size={size} variant={variant} color={color}>
             {children}
-        </Button>
-    );
-};
+        </MaterialButton>
+    )
+}
 
-export default CustomButton;
+export default Button
